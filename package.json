@@ -1,0 +1,18 @@
+{
+    "name": "@packagaya-example/root",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+        "packagaya": "packagaya sync info",
+        "packagaya:watch": "nodemon -x \"clear && LOG_LEVEL=silly packagaya sync info\" -w . -e ts"
+    },
+    "private": true,
+    "workspaces": [
+        "packages/apps/*",
+        "packages/libs/*"
+    ],
+    "devDependencies": {
+        "@packagaya/ts-adapter": "^1.3.0",
+        "typescript": "^4.1.3"
+    }
+}
