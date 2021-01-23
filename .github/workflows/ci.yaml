@@ -1,0 +1,18 @@
+name: Testing Packagaya
+
+on: [push]
+
+jobs:
+    packagaya:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout the repository
+              uses: actions/checkout@v2
+            - name: Use Node.js 15.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 15.x
+            - name: Run Packaya
+              uses: packagaya/gh-action@v6
+              env:
+                  LOG_LEVEL: debug
