@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "packagaya": "packagaya sync info",
-        "packagaya:watch": "nodemon -x \"clear && LOG_LEVEL=silly packagaya sync info\" -w . -e ts"
+        "packagaya:watch": "nodemon -x \"clear && LOG_LEVEL=silly yarn run packagaya\" -w . -e ts,json"
     },
     "private": true,
     "workspaces": [
